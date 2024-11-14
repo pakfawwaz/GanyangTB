@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Object Detection Result</title>
+</head>
+<body>
+    <h1>Result</h1>
+    <h2>Uploaded Image:</h2>
+    <img src="{{ uploaded_image }}" alt="Uploaded Image" style="max-width: 100%;">
+    
+    <h2>Detection Result:</h2>
+    <img src="{{ result_image }}" alt="Detection Result" style="max-width: 100%;">
+    
+    <br><br>
+    <a href="{{ url_for('upload_file') }}">Upload another image</a>
+</body>
+</html>
