@@ -3,14 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bacteria Detection App</title>
+    <title>TB Detection App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 500px;
+        }
+
+        h1 {
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 1.2em;
+            color: #555555;
+        }
+
+        input[type="file"] {
+            display: block;
+            margin: 10px auto 20px auto;
+            padding: 5px;
+            font-size: 1em;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-secondary {
+            background-color: #6c757d;
+        }
+
+        .btn-secondary:hover {
+            background-color: #5a6268;
+        }
+
+        footer {
+            margin-top: 20px;
+            color: #888888;
+            font-size: 0.9em;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <h1>Bacteria Detection App</h1>
-    <form action="/analyze" method="post" enctype="multipart/form-data">
-        <label for="image">Upload an image:</label>
-        <input type="file" id="image" name="image" accept="image/*" required>
-        <button type="submit">Analyze</button>
-    </form>
+    <div class="container">
+        <h1>MARI KITA MENGGANYANG TB</h1>
+        <form action="/analyze" method="post" enctype="multipart/form-data">
+            <label for="image">Upload an image:</label>
+            <input type="file" id="image" name="image" accept="image/*" required>
+            <button type="submit">Analyze</button>
+        </form>
+        <button class="btn-secondary" onclick="redirectToSamples()">View Sample Images</button>
+        <footer>
+            <p>Created by <a href="https://example.com" target="_blank">Fawwaz Zaini Ahmad and the gang</a></p>
+        </footer>
+    </div>
+
+    <script>
+        function redirectToSamples() {
+            // Replace with your Google Drive folder link
+            const driveLink = "https://drive.google.com/drive/folders/your-google-drive-folder-id";
+            window.open(driveLink, "_blank");
+        }
+    </script>
 </body>
 </html>
