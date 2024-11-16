@@ -1,6 +1,4 @@
 import os
-import cv2
-import numpy as np
 import requests
 from flask import Flask, request, jsonify, render_template, send_file
 from io import BytesIO
@@ -13,15 +11,15 @@ app = Flask(__name__)
 API_URL = "https://detect.roboflow.com"
 API_KEY = os.getenv("ROBOFLOW_API_KEY")
 if not API_KEY:
-    raise ValueError("ga nyambung woe API key nya")
+    raise ValueError("ga nyambung woe API key nya")  # Replace with your API key
 MODEL_ID = "biofarma-x-mit-hacking-medicine-hackathon/1"
 
-# Endpoint to render the upload form
+# Route to render the upload form
 @app.route('/')
 def home():
     return render_template("index.html")
 
-# Endpoint to handle image uploads and analysis
+# Route to handle image uploads and analysis
 @app.route('/analyze', methods=['POST'])
 def analyze():
     if 'image' not in request.files:
@@ -74,6 +72,7 @@ def analyze():
 
     return send_file(output_buffer, mimetype='image/jpeg')
 
+# Run the Flask app
 if __name__ == '__main__':
-    port =int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port)
+    port = int(os.environ.get("PORT", 5000))  # Use dynamic port for Heroku
+    app.run(host='0.0.0.0', port=port, debug=True)

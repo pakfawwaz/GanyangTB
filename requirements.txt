@@ -1,5 +1,3 @@
-Flask==2.3.3
-gunicorn==20.1.0
-requests==2.31.0
-opencv-python==4.8.0.76
+Flask
+requests
 Pillow
