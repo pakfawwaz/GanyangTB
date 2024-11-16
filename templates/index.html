@@ -60,6 +60,7 @@
 
         .btn-secondary {
             background-color: #6c757d;
+            margin-top: 10px; /* Adds space between the buttons */
         }
 
         .btn-secondary:hover {
@@ -86,20 +87,23 @@
     <div class="container">
         <h1>MARI KITA MENGGANYANG TB</h1>
         <form action="/analyze" method="post" enctype="multipart/form-data">
-            <label for="image">Upload an image:</label>
+            <label for="image">Upload Gambar:</label>
             <input type="file" id="image" name="image" accept="image/*" required>
             <button type="submit">Analyze</button>
         </form>
-        <button class="btn-secondary" onclick="redirectToSamples()">View Sample Images</button>
+        <div>
+            </div>
+        <button class="btn-secondary" onclick="redirectToSamples()">Sampel Gambar Sputum</button>
         <footer>
-            <p>Created by <a href="https://example.com" target="_blank">Fawwaz Zaini Ahmad and the gang</a></p>
+            <p>Created by <a href="https://www.linkedin.com/in/fawwaz-zaini-ahmad-82b03a190/" target="_blank">Fawwaz Zaini Ahmad</a></p>
+            <p>Team Member <a href="https://www.linkedin.com/in/aufaandhika/" target="_blank">Aufa Wira Andhika</a> and <a href="https://www.linkedin.com/in/alexandrasitumorang/" target="_blank">Alexandra Situmorang</a></p>
         </footer>
     </div>
 
     <script>
         function redirectToSamples() {
             // Replace with your Google Drive folder link
-            const driveLink = "https://drive.google.com/drive/folders/your-google-drive-folder-id";
+            const driveLink = "https://drive.google.com/drive/folders/1AxaXWtuXg4iwpV-yLdriuRBAAqhtBhgO?usp=drive_link";
             window.open(driveLink, "_blank");
         }
     </script>
