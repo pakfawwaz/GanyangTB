@@ -94,6 +94,9 @@
         <div>
             </div>
         <button class="btn-secondary" onclick="redirectToSamples()">Sampel Gambar Sputum</button>
+        <div>
+            </div>
+        <button class="btn-secondary" onclick="redirectToDemo()">Langsung ke Mikroskop</button>
         <footer>
             <p>Created by <a href="https://www.linkedin.com/in/fawwaz-zaini-ahmad-82b03a190/" target="_blank">Fawwaz Zaini Ahmad</a></p>
         </footer>
@@ -103,6 +106,10 @@
         function redirectToSamples() {
             // Replace with your Google Drive folder link
             const driveLink = "https://drive.google.com/drive/folders/1AxaXWtuXg4iwpV-yLdriuRBAAqhtBhgO?usp=sharing";
+            window.open(driveLink, "_blank");
+        }
+        function redirectToDemo() {
+            const driveLink = "https://demo.roboflow.com/biofarma-x-mit-hacking-medicine-hackathon/1?publishable_key=rf_x58ya5KEYMaZwGYo5a4l47ikFqg2";
             window.open(driveLink, "_blank");
         }
     </script>
